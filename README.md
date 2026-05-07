@@ -1,6 +1,8 @@
 # Anywhere Agentic AI - Predictive Maintenance System
 
 <img width="1905" height="902" alt="Screenshot 2026-05-08 000256" src="https://github.com/user-attachments/assets/c6a8bcb2-b9b8-48bc-af48-0c96bb721f2a" />
+
+
 <img width="1919" height="927" alt="Screenshot 2026-05-08 000525" src="https://github.com/user-attachments/assets/9689d2ab-f2c2-4295-a28f-5f58deb74ee1" />
 
 ## 📋 Overview
