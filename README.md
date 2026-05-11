@@ -28,7 +28,7 @@ AnywhereAgenticAI/
 ├── pages.py                    # Chat interface page component
 ├── sidebar.py                  # Agent configuration sidebar
 ├── styles.py                   # Custom CSS styling
-├── MaiStorage.csv              # Milling machine dataset
+├── anywhere.csv              # Milling machine dataset
 ├── requirements.txt            # Python dependencies
 │
 ├── agent/
@@ -127,7 +127,7 @@ AnywhereAgenticAI/
 #### `data/loader.py`
 **Purpose**: Load and process the milling machine dataset  
 **Responsibilities**:
-- Load CSV data from `MaiStorage.csv`
+- Load CSV data from `anywhere.csv`
 - Provide dataset summary statistics
 - Calculate failure rates and metrics
 - Integrate with ML model for quick accuracy checks
@@ -177,7 +177,7 @@ AnywhereAgenticAI/
 
 ### **Dataset**
 
-#### `MaiStorage.csv`
+#### `anywhere.csv`
 **Purpose**: Milling machine operational data with failure labels  
 **Contains**:
 - Machine features (air temp, process temp, RPM, torque, tool wear)

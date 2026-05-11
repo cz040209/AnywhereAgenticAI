@@ -7,6 +7,7 @@ from langchain.agents import AgentExecutor, create_react_agent
 from langchain_core.prompts import PromptTemplate
 from langchain_core.tools import Tool
 from langchain.memory import ConversationBufferMemory
+from langchain_core.callbacks.stdout import StdOutCallbackHandler
 import pandas as pd
 import numpy as np
 from typing import Any, Dict, List, Optional
@@ -15,6 +16,16 @@ import json
 from dotenv import load_dotenv
 
 load_dotenv()
+
+
+def _safe_stdout_on_chain_start(self, serialized, inputs, **kwargs):
+    """Guard LangChain's stdout callback against missing serialized metadata."""
+    serialized = serialized or {}
+    class_name = serialized.get("name") or (serialized.get("id", [None])[-1]) or "AgentExecutor"
+    print(f"\n\n\033[1m> Entering new {class_name} chain...\033[0m")  # noqa: T201
+
+
+StdOutCallbackHandler.on_chain_start = _safe_stdout_on_chain_start
 
 # ============================================================
 # FAILURE MODE THRESHOLDS 
